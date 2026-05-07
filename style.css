@@ -1,0 +1,149 @@
+/* =============================================
+   Responsive Old Typewriter Theme
+   Fixed for Mobile & Smaller Screen
+   ============================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #555454;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+
+/* ক্যালকুলেটর বক্স - হালকা ছোট ও রেসপনসিভ */
+.box {
+    background: #1e1e1e;
+    background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+    padding: 25px 20px;
+    border-radius: 35px;
+    box-shadow: 
+        20px 20px 50px #000, 
+        inset 0 0 5px rgba(255, 255, 255, 0.02);
+    border: 3px solid #141414;
+    text-align: center;
+    width: 100%;
+    max-width: 380px; /* পিসি ও ফোনের জন্য ব্যালেন্স সাইজ */
+}
+
+/* টাইপরাইটার ডিসপ্লে */
+#display {
+    width: 100%;
+    height: 75px;
+    background: #151815;
+    border: 2px solid #333;
+    color: #a9b7a9;
+    font-size: 38px;
+    text-align: right;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: inset 0 6px 12px #000;
+    outline: none;
+    letter-spacing: 2px;
+}
+
+/* বাটন রো */
+p {
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* বাটনগুলোর গ্যাপ ফিক্সড */
+    margin: 10px 0;
+}
+
+/* টাইপরাইটার কি - সাইজ হালকা ছোট (Responsive) */
+.btn_1, .btn_2, .btn1 {
+    border: none;
+    outline: none;
+    color: #d1d1d1;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 72px; /* হালকা ছোট সাইজ */
+    width: 72px;  /* হালকা ছোট সাইজ */
+    border-radius: 50%;
+    position: relative;
+    background: #252525;
+    
+    /* সলিড মেকানিক্যাল ডেপথ */
+    box-shadow: 
+        0 8px 0 #000, 
+        0 10px 15px rgba(0,0,0,0.6);
+        
+    transition: all 0.1s ease;
+}
+
+/* বাটন সাইড রিং */
+.btn_1::before, .btn_2::before, .btn1::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 50%;
+    border: 1.5px solid #3a3a3a;
+    pointer-events: none;
+}
+
+/* অপারেটর বাটন */
+.btn_2 {
+    background: #a95217;
+    color: #fff;
+    box-shadow: 0 8px 0 #4a2308, 0 10px 15px rgba(0,0,0,0.6);
+}
+
+/* ক্লিক ইফেক্ট */
+.btn_1:active, .btn_2:active, .btn1:active {
+    transform: translateY(6px);
+    box-shadow: 0 2px 0 #000, 0 4px 8px rgba(0,0,0,0.6);
+}
+
+/* ক্লিয়ার বাটন - লম্বা ও বোল্ড */
+.btn1 {
+    width: 100%;
+    max-width: 340px;
+    height: 65px;
+    border-radius: 12px;
+    background: #2a2a2a;
+    margin: 15px auto !important;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* আপনার নাম - সাদা ও ক্লিয়ার */
+.footer-text {
+    color: #ffffff;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* ফোনের জন্য ছোট সাইজ অ্যাডজাস্টমেন্ট */
+@media (max-width: 400px) {
+    .btn_1, .btn_2 {
+        height: 65px;
+        width: 65px;
+        font-size: 20px;
+    }
+    .box {
+        padding: 20px 15px;
+    }
+    #display {
+        font-size: 32px;
+        height: 65px;
+    }
+}
